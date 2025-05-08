@@ -1,9 +1,10 @@
-from getvideo_repository import GetVideo
-from flask import Flask
 import os
+from flask import Flask
+from flask_cors import CORS 
+from getvideo_repository import GetVideo
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/')
 def get_latest_video():
